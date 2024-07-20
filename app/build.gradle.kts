@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.currencyconversion"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.currencyconversion"
@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
