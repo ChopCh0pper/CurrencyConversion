@@ -3,6 +3,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="convert">convert</string>
     <string name="rub">RUB</string>
+    <string name="back">back</string>
+    <string name="toast_msg_invalid_amount">Invalid amount. Please enter a valid number greater than zero.</string>
 
     <string-array name="currencies">
         <item>USD</item>

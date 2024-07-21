@@ -17,6 +17,11 @@ class MainActivity : AppCompatActivity() {
     fun goToSecondFragment() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.placeHolder, SecondFragment())
+            .addToBackStack(null)
             .commit()
+    }
+
+    fun goToFirstFragment() {
+        supportFragmentManager.popBackStack()
     }
 }

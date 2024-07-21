@@ -1,15 +1,17 @@
 package com.example.currencyconversion.API
 
 import com.example.currencyconversion.models.CurrencyData
-import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface APIService {
-    @GET("latest.json")
+    @GET("v6/{apiKey}/{request}/{baseCode}/{targetCode}/{amount}")
     suspend fun getCurrency(
-        @Query("app_id") appId: String,
-        @Query("base") base: String,
-        @Query("symbols") symbols: String
-    ): Call<CurrencyData>
+        @Path("apiKey") apiKey: String,
+        @Path("request") request: String,
+        @Path("baseCode") baseCode: String,
+        @Path("targetCode") targetCode: String,
+        @Path("amount") amount: String
+    ): Response<CurrencyData>
 }
